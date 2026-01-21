@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog CRUD</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, textarea { width: 100%; padding: 8px; margin: 6px 0; }
+    button { padding: 8px 12px; margin-right: 6px; }
+    .box { border: 1px solid #ddd; padding: 12px; border-radius: 10px; margin-bottom: 12px; }
+    .item { border: 1px solid #eee; padding: 10px; border-radius: 10px; margin-top: 10px; }
+    small { color: #555; }
+  </style>
+</head>
+<body>
+  <h2>Blog CRUD UI</h2>
+
+  <div class="box">
+    <h3>Create / Update</h3>
+    <input id="id" placeholder="Blog ID (update үшін ғана)" />
+    <input id="title" placeholder="Title *" />
+    <textarea id="body" placeholder="Body *"></textarea>
+    <input id="author" placeholder="Author (default Anonymous)" />
+    <button onclick="save()">Save</button>
+    <button onclick="clearForm()">Clear</button>
+    <p id="msg"></p>
+  </div>
+
+  <div class="box">
+    <h3>All blogs</h3>
+    <button onclick="loadBlogs()">Refresh</button>
+    <div id="list"></div>
+  </div>
+
+  <pre id="out">{}</pre>
+
+<script src="app.js"></script>
+</body>
+</html>
